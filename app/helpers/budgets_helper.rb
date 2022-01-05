@@ -16,9 +16,7 @@ module BudgetsHelper
   end
 
   def css_for_ballot_heading(heading)
-    return "" if current_ballot.blank? || @current_filter == "unfeasible"
-
-    current_ballot.has_lines_in_heading?(heading) ? "is-active" : ""
+    current_ballot&.has_lines_in_heading?(heading) ? "is-active" : ""
   end
 
   def current_ballot
@@ -31,18 +29,6 @@ module BudgetsHelper
 
   def budget_published?(budget)
     budget.published? || current_user&.administrator?
-  end
-
-  def display_calculate_winners_button?(budget)
-    budget.balloting_or_later?
-  end
-
-  def calculate_winner_button_text(budget)
-    if budget.investments.winners.empty?
-      t("admin.budgets.winners.calculate")
-    else
-      t("admin.budgets.winners.recalculate")
-    end
   end
 
   def budget_subnav_items_for(budget)

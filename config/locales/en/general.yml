@@ -213,7 +213,6 @@ en:
       conditions: Terms and conditions of use
       consul: CONSUL application
       consul_url: https://github.com/consul/consul
-      contact_us: For technical assistance visit
       copyright: CONSUL, %{year}
       description: This portal uses the %{consul} which is %{open_source}.
       open_source: open-source software
@@ -471,7 +470,7 @@ en:
       group_by_month: Monthly
       group_by_week: Weekly
       group_by_date: Daily
-      progress: Acumulated progress
+      progress: Accumulated progress
       supports: Supports
       success: Ideal progress
       new_action: New
@@ -769,8 +768,8 @@ en:
         zero: "0 languages in use"
         one: "1 language in use"
         other: "%{count} languages in use"
-    optional: "Optional"
-    required: "Required"
+    optional: "Optional fields"
+    required: "Required fields"
   social:
     facebook: "%{org} Facebook"
     twitter: "%{org} Twitter"
@@ -893,11 +892,6 @@ en:
       budget_investments:
         title: Recommended investments
       slide: "See %{title}"
-    verification:
-      i_dont_have_an_account: I don't have an account
-      i_have_an_account: I already have an account
-      question: Do you already have an account in %{org_name}?
-      title: Account verification
     welcome:
       go_to_index: Not now, go to index page
       start_using_consul: Go to index page

@@ -977,13 +977,6 @@ footer {
   }
 }
 
-.sidebar-map {
-
-  .map {
-    z-index: 0;
-  }
-}
-
 .sidebar-title {
   border-top: 2px solid $brand;
   display: inline-block;
@@ -1884,6 +1877,10 @@ table {
     padding: $line-height / 4;
     position: relative;
 
+    &:empty {
+      display: none;
+    }
+
     .divider {
       color: $text-light;
       display: inline-block;
@@ -2125,7 +2122,8 @@ table {
   @include full-width-background;
 
   .debates-list &::before,
-  .proposals-list &::before {
+  .proposals-list &::before,
+  .admin &::before {
     content: none;
   }
 
@@ -2138,6 +2136,7 @@ table {
   }
 
   + .budget-header,
+  + .budgets-index > .budget-header,
   + .jumbo {
     margin-top: 0;
   }
@@ -2561,6 +2560,11 @@ table {
     height: $line-height * 2;
     background: $highlight;
     margin-top: rem-calc(-48);
+
+    @include breakpoint($global-width) {
+      margin-left: calc(#{$full-width-margin});
+      margin-right: calc(#{$full-width-margin});
+    }
   }
 
   .cards-container {

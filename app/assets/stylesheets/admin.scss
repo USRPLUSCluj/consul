@@ -179,7 +179,10 @@ $table-header:   #ecf1f6;
   table {
 
     caption {
-      @include element-invisible;
+      font-style: italic;
+      font-weight: normal;
+      padding: 0;
+      text-align: $global-left;
     }
 
     thead {
@@ -587,13 +590,6 @@ code {
   p {
     font-size: $small-font-size;
     margin-bottom: 0;
-  }
-}
-
-.admin {
-
-  .investment-projects-list.medium-9 {
-    width: 100%;
   }
 }
 
