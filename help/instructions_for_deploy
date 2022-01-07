@@ -1,0 +1,8 @@
+#with ssh_key from vlad, connect to server:
+ssh usr@188.27.128.107
+
+#update project from git:
+cd consul
+git pull
+#deploy command
+branch=stable cap production deploy

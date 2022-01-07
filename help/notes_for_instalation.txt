@@ -1,0 +1,52 @@
+On server create deploy user:
+https://docs.consulproject.org/docs/english-documentation/introduction/servers/create_deploy_user
+#add ssh key.pub (copy public ssh in .ssh/authorized_key)
+ssh-add key # on local machine
+
+
+Detailed instrucctions on : https://github.com/consul/installer
+sudo apt-get update
+
+-Install ansible
+https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-ubuntu
+$ sudo apt update
+$ sudo apt install software-properties-common
+$ sudo add-apt-repository --yes --update ppa:ansible/ansible
+$ sudo apt install ansible
+
+-Install git
+sudo apt-get install git
+
+-- added sources.list from 20.04 version of ubuntu
+sudo apt update
+sudo apt install ruby-full
+$ sudo apt-get install ubuntu-dev-tools
+
+-- if gails gem pg
+sudo apt-get install libpq-dev
+
+--install make
+sudo apt-get install cmake
+
+
+
+sudo gem install bundler
+bundle install --
+gem install rugged
+
+#gem install pg
+--if fails
+sudo apt-get install libssl-dev
+
+
+-Install capistrano
+sudo apt-get install -y capistrano
+/var/lib/gems/2.7.0/extensions/x86_64-linux/2.7.0/rugged-1.3.0/mkmf.log
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC2gfZu/8eyTb4sK0RFr1ph13B+5fKF9K6gbg5QJTd7KdHc5lrr5n6IML8lRTttL22+RmgBtm+MDYP5sXqHCLqG+O6oVzSqaXvD/54IKYEikpeem9DGm3JZendbBOJvAeZMNzKv9plye+ZzYl1CBv6IXJ0z/rKlrN5PD/pgZNjqJUUNBIuEZt2gSo/RSdA9zBEtQd9o5mmTjIYtS9vJ5p0tulrFwuqsX+BChlS9iCGsAfhPN93qnahY+vJyC4FGVLLA67+844ANE2Y7zBIIJN0xR2goxjHNYmSg13oqlSV3LgQs9tAUAs9XgJ1NYXuctoULF7Dq8a1F9+SF1Xn7co0WlpI9TnF3Qokh8sYW1L0v7Mhnjt8SJ4p++Dr26MWr8wYxoCbjYAakG5MPQck08pc69pSNmaj+ZlO75Rj1s0d/hmF4nTDAqiyrCywAiEh1Nrwn+AMdqRtMHVTSTN7ZLPQhxP9UTE2ZCaV0lfpop21Mlc8FCwxiTuKj+eZtbO6T3Ts= deploy@vmi516344.contaboserver.net
+
+
+
+--if capistrano deploy fails
+sudo -u git -H bundle install --deployment --without development test postgres aws
+--it will install all capistrano gems
